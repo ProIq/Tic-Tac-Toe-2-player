@@ -12,6 +12,8 @@ function decideWinner(g){
                 tile[a].style.color="yellow";
                 tile[b].style.color="yellow";
                 tile[c].style.color="yellow";
+                document.querySelector("#player").textContent="Player X wins";
+                document.querySelector("#player").style.color="yellow";
                 return 1;
             }
         }
@@ -20,6 +22,8 @@ function decideWinner(g){
                 tile[a].style.color="yellow";
                 tile[b].style.color="yellow";
                 tile[c].style.color="yellow";
+                document.querySelector("#player").textContent="Player O wins";
+                document.querySelector("#player").style.color="yellow";
                 return 2;
             }
         }
@@ -31,12 +35,6 @@ clone.forEach((t)=>{
         if(t.textContent==""&&decideWinner(game)!=1&&decideWinner(game)!=2){
             makeMove(t.dataset.index);
         }
-        else if(decideWinner(game)==1){
-            console.log("X");
-        }
-        else if(decideWinner(game)==2){
-            console.log("O");
-        }
     })
 })
 function update(){
@@ -45,9 +43,12 @@ function update(){
         tile[i].textContent="";
         game[i]=null;
     }
+    document.querySelector("#player").textContent="";
 }
 function makeMove(i){
     if(cnt%2==0){
+        document.querySelector(".r-x").style.borderBottom="thick solid red";
+        document.querySelector(".r-o").style.borderBottom="none";
         tile[i].textContent="X";
         game[i]="X";
         tile[i].style.color="red";
@@ -56,6 +57,8 @@ function makeMove(i){
     else if(cnt%2){
         tile[i].textContent="O"; 
         tile[i].style.color="blue";
+        document.querySelector(".r-x").style.borderBottom="none";
+        document.querySelector(".r-o").style.borderBottom="thick solid blue";
         game[i]="O";
         cnt++;
     } 
