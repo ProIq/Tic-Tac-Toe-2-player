@@ -44,6 +44,8 @@ function update(){
         game[i]=null;
     }
     document.querySelector("#player").textContent="";
+    document.querySelector(".r-x").style.borderBottom="none";
+    document.querySelector(".r-o").style.borderBottom="none";
 }
 function makeMove(i){
     if(cnt%2==0){
