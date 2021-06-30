@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin:0% ;
+    padding:0%;
+    font-family: monospace;
+    font-style: oblique;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left{
+    width: 50vw;
+    height: 50vh;
+}
+.right{
+    width: 50vw;
+    height: 50vh;
+}
+.lets{
+    height: 20vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.butt{
+    width: 175px;
+    height: 40px;
+   background-color:rgb(197, 214, 230);
+   color:black;
+   border-radius: 50px;
+   outline: none;
+}
+.butt:hover{
+    transition-duration: 0.4s;    
+    transform: scale(1.2);
+    cursor:pointer
+}
+.but{
+    width: 50vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+.right{
+    width: 50vw;
+    height:50vh;
+    display:block;
+}
+.canvas{
+    width: 50vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    grid-template-rows: repeat(3,3fr);
+}
+.c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:bolder;
+    font-size:40px;
+}
+.c:hover{
+    background-color: greenyellow;
+    color:black;
+}
+.c:not(:nth-child(3n)){
+    border-right:5px solid green;    
+}
+.c:not(:nth-last-child(-n+3)){
+    border-bottom:5px solid green;
+}
+.k{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+.r{
+    display: flex;
+    justify-content: space-around;
+    width:25vw;
+    height:40px;
+}
+.r-x{
+    border-bottom:5px solid red;
+}
+.r-o{
+    border-bottom:5px solid blue;
+}
+.game{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
