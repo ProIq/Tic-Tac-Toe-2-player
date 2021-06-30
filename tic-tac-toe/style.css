@@ -13,6 +13,10 @@
     justify-content: space-around;
     align-items: center;
 }
+.r-o,.r-x,#player{
+    width: 15vw;
+    flex:1;
+}
 .left{
     width: 50vw;
     height: 50vh;
@@ -84,14 +88,8 @@
 .r{
     display: flex;
     justify-content: space-around;
-    width:25vw;
+    width:50vw;
     height:40px;
-}
-.r-x{
-    border-bottom:5px solid red;
-}
-.r-o{
-    border-bottom:5px solid blue;
 }
 .game{
     height: 100vh;
