@@ -8,7 +8,7 @@
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: cornflowerblue;
+    background:linear-gradient(rgb(160, 160, 71),rgb(212, 133, 133));
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -18,7 +18,7 @@
     flex:1;
 }
 .left{
-    width: 50vw;
+    max-width: 50vw;
     height: 50vh;
 }
 .right{
@@ -97,4 +97,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media only screen and (max-width:1200px){
+    .container{
+        flex-direction: column;
+    }
 }
